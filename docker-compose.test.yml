@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  test:
+    build:
+      context: .
+      target: base
+    command: yarn test
+    environment:
+      - CI=true
+    volumes:
+      - "./__test__:/usr/src/service/__test__"

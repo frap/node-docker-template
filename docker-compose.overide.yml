@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      target: base
+    command: yarn start
+    ports:
+      - 3000:3000
+    volumes:
+      - "./src:/usr/src/service"
+
+
+  db:
+    command: '-d'
+    ports:
+      - 5432:5432
