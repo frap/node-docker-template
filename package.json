@@ -9,7 +9,8 @@
     "start": "yarn start",
     "test": "jest --watchAll",
     "coverage": "jest --coverage --coverageReporters=text",
-    "lint": "eslint"
+    "lint": "eslint . && prettier-eslint --list-different **/*.js",
+    "format": "prettier-eslint --write **/*.js"
   },
   "devDependencies": {
     "eslint": "^6.2.1",
